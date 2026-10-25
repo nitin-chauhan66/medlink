@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedLink | Top-Tier Medical Tourism in India</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Pulse Animation for WhatsApp Button */
+        @keyframes soft-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .whatsapp-fab {
+            animation: soft-pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
+                        M
+                    </div>
+                    <span class="font-bold text-2xl tracking-tight text-brand-900">MedLink</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#specialties" class="text-gray-600 hover:text-brand-600 font-medium transition">Specialties</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-brand-600 font-medium transition">How It Works</a>
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-medium shadow-md shadow-brand-500/30 transition-all transform hover:-translate-y-0.5">
+                        Get a Free Estimate
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#specialties" class="block px-3 py-3 text-gray-700 font-medium hover:bg-gray-50 rounded-md">Specialties</a>
+                <a href="#how-it-works" class="block px-3 py-3 text-gray-700 font-medium hover:bg-gray-50 rounded-md">How It Works</a>
+                <a href="#contact" class="block text-center mt-4 bg-brand-600 text-white px-3 py-3 rounded-lg font-medium shadow-sm">Get a Free Estimate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-900">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1538108149393-cebb47ac1136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Modern Hospital" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-900 to-brand-900/80"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col md:flex-row items-center">
+            <div class="md:w-3/5 md:pr-12">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Accepting International Patients
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Bypass 6-12 Month <br class="hidden lg:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-100 to-white">Surgery Wait Times.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-brand-100 mb-10 max-w-2xl font-light">
+                    Access JCI-Accredited Hospitals in India at <strong>60% Less Cost</strong>. World-class medical care with end-to-end travel and concierge support.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-white text-brand-900 hover:bg-gray-50 px-8 py-4 rounded-full font-bold text-lg shadow-xl transition-all transform hover:-translate-y-1">
+                        Get a Free Estimate
+                    </a>
+                    <a href="https://wa.me/1234567890" target="_blank" class="bg-transparent border border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-full font-medium text-lg flex items-center justify-center gap-2 transition-all">
+                        <i class="fab fa-whatsapp text-green-400 text-xl"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Trust Card -->
+            <div class="md:w-2/5 mt-16 md:mt-0 hidden md:block">
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-white text-xl font-bold mb-6">Why Choose MedLink?</h3>
+                    <ul class="space-y-4 text-brand-50">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <span>Immediate priority bookings with top surgeons.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <span>Transparent pricing. No hidden fees.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-400 mt-1"></i>
+                            <span>Complete visa and travel coordination included.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators (Accreditations) -->
+    <section class="py-10 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold text-gray-500 tracking-wider uppercase mb-6">Partnered exclusively with accredited institutions</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-70 grayscale hover:grayscale-0 transition duration-500">
+                <!-- Mock JCI Logo -->
+                <div class="flex items-center gap-2 text-xl font-extrabold text-brand-900">
+                    <i class="fas fa-globe-americas text-brand-600 text-3xl"></i>
+                    JCI ACCREDITED
+                </div>
+                <!-- Mock NABH Logo -->
+                <div class="flex items-center gap-2 text-xl font-extrabold text-brand-900">
+                    <i class="fas fa-shield-alt text-brand-600 text-3xl"></i>
+                    NABH CERTIFIED
+                </div>
+                <!-- ISO Logo -->
+                <div class="flex items-center gap-2 text-xl font-bold text-gray-700">
+                    ISO 9001:2015
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section id="specialties" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Excellence in Specialized Care</h2>
+                <p class="text-lg text-gray-600">We partner with India's leading specialists to provide world-class surgical outcomes in high-demand fields.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Orthopedics -->
+                <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors">
+                        <i class="fas fa-bone text-2xl text-brand-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Orthopedics</h3>
+                    <p class="text-gray-600 mb-4">Joint replacements (Knee, Hip), spine surgeries, and sports medicine with zero wait time.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Total Knee Replacement</li>
+                        <li>• Spinal Fusion</li>
+                        <li>• Hip Resurfacing</li>
+                    </ul>
+                </div>
+                
+                <!-- Cardiology -->
+                <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors">
+                        <i class="fas fa-heartbeat text-2xl text-brand-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Cardiology</h3>
+                    <p class="text-gray-600 mb-4">Advanced cardiac care including bypass surgeries and valve replacements by top surgeons.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• CABG (Bypass Surgery)</li>
+                        <li>• Valve Replacement</li>
+                        <li>• Angioplasty</li>
+                    </ul>
+                </div>
+
+                <!-- Oncology -->
+                <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors">
+                        <i class="fas fa-ribbon text-2xl text-brand-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Oncology</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive cancer care, robotic surgeries, and advanced radiation therapies.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Tumor Removal</li>
+                        <li>• Robotic Surgery</li>
+                        <li>• Chemotherapy Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Journey to Recovery</h2>
+                <p class="text-lg text-gray-600">A seamless, end-to-end concierge experience handled by your dedicated MedLink manager.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line for Desktop -->
+                <div class="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-brand-200 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-brand-100 rounded-full flex items-center justify-center shadow-lg mb-6">
+                        <span class="text-2xl font-bold text-brand-600">1</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Free Consultation</h4>
+                    <p class="text-gray-600">Share your medical reports. We provide a transparent cost estimate within 24 hours.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-brand-100 rounded-full flex items-center justify-center shadow-lg mb-6">
+                        <span class="text-2xl font-bold text-brand-600">2</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Hospital Matching</h4>
+                    <p class="text-gray-600">We align you with the right JCI-accredited hospital and specialist for your exact needs.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-brand-100 rounded-full flex items-center justify-center shadow-lg mb-6">
+                        <span class="text-2xl font-bold text-brand-600">3</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Travel Coordination</h4>
+                    <p class="text-gray-600">We handle your medical visa, flights, airport pickup, and local accommodation.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 mx-auto bg-brand-600 border-4 border-brand-200 rounded-full flex items-center justify-center shadow-xl mb-6 transform scale-110">
+                        <span class="text-2xl font-bold text-white"><i class="fas fa-heart"></i></span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Surgery & Recovery</h4>
+                    <p class="text-gray-600">24/7 on-ground support during your hospital stay and post-treatment recovery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Lead Capture Section -->
+    <section id="contact" class="py-24 bg-white relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 bg-brand-50 rounded-full blur-3xl opacity-70"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-brand-100 rounded-full blur-3xl opacity-70"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                <div class="grid md:grid-cols-5 h-full">
+                    
+                    <!-- Form Sidebar -->
+                    <div class="md:col-span-2 bg-brand-900 text-white p-10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Get Your Free Treatment Plan</h3>
+                            <p class="text-brand-100 mb-8 font-light">Skip the queue. Tell us what you need, and our medical case manager will contact you within 24 hours.</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="fab fa-whatsapp"></i></div>
+                                    <div>
+                                        <p class="text-xs text-brand-200">24/7 WhatsApp Support</p>
+                                        <p class="font-medium">+91 98765 43210</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="far fa-envelope"></i></div>
+                                    <div>
+                                        <p class="text-xs text-brand-200">Email Us</p>
+                                        <p class="font-medium">care@medlink.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Form -->
+                    <div class="md:col-span-3 p-10">
+                        <form id="leadForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <div class="grid grid-cols-1 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                                    <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-gray-50 focus:bg-white" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                                    <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-gray-50 focus:bg-white" placeholder="john@example.com">
+                                </div>
+                                <div>
+                                    <label for="procedure" class="block text-sm font-medium text-gray-700 mb-1">Procedure Needed (Optional)</label>
+                                    <select id="procedure" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-gray-50 focus:bg-white">
+                                        <option value="">Select a procedure...</option>
+                                        <option value="orthopedic">Orthopedic (Knee, Hip, Spine)</option>
+                                        <option value="cardiology">Cardiology</option>
+                                        <option value="oncology">Oncology / Cancer Care</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message / Medical Details</label>
+                                    <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-gray-50 focus:bg-white" placeholder="Briefly describe your medical condition or requirements..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex justify-center items-center gap-2">
+                                Get My Free Estimate <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="successMessage" class="hidden h-full flex flex-col items-center justify-center text-center py-10 space-y-4">
+                            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mb-2">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900">Request Received!</h4>
+                            <p class="text-gray-600">Your dedicated case manager will reach out to you at the email provided within 24 hours.</p>
+                            <button onclick="resetForm()" class="mt-4 text-brand-600 font-medium hover:underline">Submit another request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white font-bold">M</div>
+                    <span class="font-bold text-xl text-white">MedLink</span>
+                </div>
+                <p class="text-sm pr-4">Simplifying global healthcare. We connect international patients with India's most prestigious, accredited hospitals for world-class treatment at a fraction of the cost.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#specialties" class="hover:text-brand-400 transition">Specialties</a></li>
+                    <li><a href="#how-it-works" class="hover:text-brand-400 transition">How it Works</a></li>
+                    <li><a href="#contact" class="hover:text-brand-400 transition">Request Estimate</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Legal & Compliance</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-brand-400 transition">HIPAA Compliance</a></li>
+                    <li><a href="#" class="hover:text-brand-400 transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-brand-400 transition">Terms of Service</a></li>
+                </ul>
+                <p class="text-xs mt-6">© 2026 MedLink Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-fab fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Form Handling
+        function handleFormSubmit(e) {
+            e.preventDefault(); // Prevent page reload
+            
+            // Hide form, show success state
+            document.getElementById('leadForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+        }
+
+        function resetForm() {
+            // Reset form fields
+            document.getElementById('leadForm').reset();
+            
+            // Show form, hide success state
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('leadForm').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
